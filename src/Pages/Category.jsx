@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { auth } from "../firebase/firebase.init";
 import './page.css'
-import { toast } from "react-toastify";
+
 
 
 const Category = () => {
@@ -15,7 +15,7 @@ const Category = () => {
         accessToken;
         // console.log(auth.currentUser)
 
-        const res = await axios.get("http://localhost:5000/books", {
+        const res = await axios.get("https://server-site-sigma-ashy.vercel.app/books", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -1,12 +1,38 @@
-# React + Vite
+# 📚 Readify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Readify** is a modern web application where users can add books, upvote others' books, and leave reviews. It's a social platform for book lovers to share, discover, and engage with interesting reads.
 
-Currently, two official plugins are available:
+## 🚀 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Live: [https://readify-app.netlify.app](https://readify-app.netlify.app)  
+🔗 Backend: [https://readify-server.vercel.app](https://readify-server.vercel.app)
 
-## Expanding the ESLint configuration
+## 🎯 Project Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of this project is to:
+- Allow users to create and manage their book collection.
+- Enable community interaction through upvotes and reviews.
+- Build a secure, full-stack MERN (MongoDB, Express, React, Node) application using Firebase for authentication.
+
+## ✨ Key Features
+
+- 🔐 **User Authentication** using Firebase (Google Sign-In and email/password)
+- ➕ **Add Book**: Users can submit new books with details (title, author, cover, pages, category, overview)
+-  **Upvote System**: Users can upvote others' books 
+-  **Review Section**: Users can leave one review per book and can edit or delete their own reviews
+-  **Featured Books**: Shows the top 6 most upvoted books on the homepage
+-  **Protected API** using Firebase Token-based authentication
+-  **Private Routes**: Certain pages are accessible only when logged in
+
+## Packages Used
+
+- React Router 
+- Axios
+- Tailwind CSS
+- DaisyUI
+- Firebase
+- React Hook Form
+- React  Toastify
+- Framer Motion 
+
+

@@ -15,7 +15,7 @@ const [isEditing, setIsEditing] = useState(false);
 const [editingReviewId, setEditingReviewId] = useState(null);
 
 const fetchReviews = async () => {
-  const res = await axios.get(`http://localhost:5000/reviews/${id}`);
+  const res = await axios.get(`https://server-site-sigma-ashy.vercel.app/reviews/${id}`);
   setReviews(res.data);
 };
 
@@ -35,8 +35,8 @@ const handleReviewSubmit = async (e) => {
   };
 
   const url = isEditing
-    ? `http://localhost:5000/reviews/${editingReviewId}`
-    : `http://localhost:5000/reviews`;
+    ? `https://server-site-sigma-ashy.vercel.app/reviews/${editingReviewId}`
+    : `https://server-site-sigma-ashy.vercel.app/reviews`;
 
   const method = isEditing ? axios.patch : axios.post;
 
@@ -58,7 +58,7 @@ const startEdit = (review) => {
 
 const deleteReview = async (id) => {
   const token = await auth.currentUser.getIdToken();
-  await axios.delete(`http://localhost:5000/reviews/${id}`, {
+  await axios.delete(`https://server-site-sigma-ashy.vercel.app/reviews/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   fetchReviews();
@@ -72,7 +72,7 @@ const deleteReview = async (id) => {
             if (user) {
                 const token = await user.getIdToken();
                 axios
-                    .get(`http://localhost:5000/books/${id}`, {
+                    .get(`https://server-site-sigma-ashy.vercel.app/books/${id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -97,7 +97,7 @@ const deleteReview = async (id) => {
     
         const token = await user.getIdToken();
     
-        axios.patch(`http://localhost:5000/books/status/${book._id}`, {
+        axios.patch(`https://server-site-sigma-ashy.vercel.app/books/status/${book._id}`, {
             reading_status: newStatus
         }, {
             headers: { Authorization: `Bearer ${token}` }
@@ -127,7 +127,7 @@ const deleteReview = async (id) => {
         const token = await user.getIdToken();
       
         axios
-          .patch(`http://localhost:5000/books/upvote/${book._id}`, {}, {
+          .patch(`https://server-site-sigma-ashy.vercel.app/books/upvote/${book._id}`, {}, {
             headers: { Authorization: `Bearer ${token}` },
           })
           .then((res) => {

@@ -4,7 +4,7 @@ import { getIdToken, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/firebase.init";
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000', 
+  baseURL: 'https://server-site-sigma-ashy.vercel.app', 
 });
 
 const useAxiosSecure = () => {

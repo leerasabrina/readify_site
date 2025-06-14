@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getIdToken } from 'firebase/auth';
+// import { getIdToken } from 'firebase/auth';
 import { 
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword, 
@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/users', {
+      const res = await fetch('https://server-site-sigma-ashy.vercel.app/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json',
           authorization: `Bearer ${token}`
@@ -53,10 +53,8 @@ const AuthProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
-  
-   
       const token = await auth.currentUser.accessToken ;
-      await fetch('http://localhost:5000/users', {
+      await fetch('https://server-site-sigma-ashy.vercel.app/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +62,7 @@ const AuthProvider = ({ children }) => {
         },
         body: JSON.stringify({
           email: user.email,
-          name: user.displayName,
+          displayName: user.displayName,
           photoURL: user.photoURL
         }),
       });
@@ -141,7 +139,7 @@ const AuthProvider = ({ children }) => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/users/${firebaseUser.email}`,{
+      const res = await fetch(`https://server-site-sigma-ashy.vercel.app/users/${firebaseUser.email}`,{
         headers: {
           'authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',

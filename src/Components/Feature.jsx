@@ -13,7 +13,7 @@ const Feature = () => {
       const token = user && (await user.accessToken);
 
       try {
-        const res = await axios.get("http://localhost:5000/books/featured", {
+        const res = await axios.get("https://server-site-sigma-ashy.vercel.app/books/featured", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
