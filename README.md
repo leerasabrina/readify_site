@@ -4,7 +4,7 @@
 
 ## 🚀 Live Site
 
-🔗 Live: [https://readify-app.netlify.app](https://readify-app.netlify.app)  
+🔗 Live: https://majestic-gecko-df700c.netlify.app
 🔗 Backend: [https://readify-server.vercel.app](https://readify-server.vercel.app)
 
 ## Project Purpose
