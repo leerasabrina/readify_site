@@ -2,7 +2,7 @@
 
 **Readify** is a modern web application where users can add books, upvote others' books, and leave reviews. It's a social platform for book lovers to share, discover, and engage with interesting reads.
 
-## 🚀 Live Site
+##  Live Site
 
 🔗 Live: https://majestic-gecko-df700c.netlify.app
 🔗 Backend: https://server-site-sigma-ashy.vercel.app
