@@ -4,7 +4,7 @@
 
 ##  Live Site
 
-🔗 Live: https://majestic-gecko-df700c.netlify.app
+ Live: https://majestic-gecko-df700c.netlify.app
 🔗 Backend: https://server-site-sigma-ashy.vercel.app
 ## Project Purpose
 
