@@ -1,6 +1,6 @@
 #  Readify
 
-**Readify** is a modern web application where users can add books, upvote others' books, and leave reviews. It's a social platform for book lovers to share, discover, and engage with interesting reads
+**Readify** is a modern web application where users can add books, upvote others' books, and leave reviews. It's a social platform for book lovers to share, discover, and engage with interesting reads.
 
 ##  Live Site
 
