@@ -5,8 +5,7 @@
 ## 🚀 Live Site
 
 🔗 Live: https://majestic-gecko-df700c.netlify.app
-🔗 Backend: [https://readify-server.vercel.app](https://readify-server.vercel.app)
-
+🔗 Backend: https://server-site-sigma-ashy.vercel.app
 ## Project Purpose
 
 The goal of this project is to:
