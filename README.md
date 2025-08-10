@@ -1,7 +1,7 @@
 #  Readify
 
 **Readify** is a modern web application where users can add books, upvote others' books, and leave reviews. It's a social platform for book lovers to share, discover, and engage with interesting reads
-
+<p align='center'> <img src="https://i.ibb.co.com/Zz1F24n2/Screenshot-2025-08-08-162345.png" alt="Screenshot" width="600"/></p>
 ##  Live Site
 
  Live: https://vocal-melomakarona-d5383e.netlify.app
