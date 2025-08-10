@@ -41,7 +41,7 @@ const Faq = () => {
           <div className="flex justify-between items-center p-4 font-semibold hover:bg-base-200">
             {faq.question}
             <span className="text-xl">
-              {activeIndex === i ? "−" : "+"}
+              {activeIndex === i ? "-" : "+"}
             </span>
           </div>
           {activeIndex === i && (
