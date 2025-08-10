@@ -5,7 +5,7 @@ const Readify = () => {
    
        
            return (
-    <section className="bg-gray-50 max-w-7xl mx-auto rounded-lg py-10 px-4 md:px-20 text-center">
+    <section className="bg-gray-0 max-w-7xl mx-auto rounded-lg py-10 px-4 md:px-20 text-center">
       <h2 className="text-3xl fade-in-left font-bold text-orange-600 mb-6">Why Readify?</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
