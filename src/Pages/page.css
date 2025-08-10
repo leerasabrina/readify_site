@@ -10,7 +10,7 @@
     }
   }
   .fade-in-up {
-    animation: fadeInUp 4s ease-in forwards;
+    animation: fadeInUp 2s ease-in forwards;
   }
   
 @keyframes bounce-twice {
@@ -25,6 +25,10 @@
   .bounce-twice {
     animation: bounce-twice 1s ease-in-out 1;
   }
+  .custom-link {
+  font-size: 14px !important;
+}
+
   
   
   

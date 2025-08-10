@@ -4,6 +4,9 @@
 }
 
 
+.custom-size {
+  font-size: 18px !important;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;

@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import { Outlet, useLocation } from 'react-router';
 import { ToastContainer } from 'react-toastify';
-import Loader from '../loader/Loader.jsx';
-import Navbar from '../Components/Navbar.jsx';
-import Footer from '../Components/Footer.jsx';
+import Loader from '../loader/Loader';
 
-const Root = () => {
+
+const Condition = () => {
     const [loading, setLoading] = useState(false);
   const location = useLocation();
 
@@ -21,13 +20,12 @@ const Root = () => {
     return (
         <div className='min-h-screen'>
         
-        <Navbar></Navbar>
-       {loading 
+      {loading 
   ? <div style={{ minHeight: "calc(100vh - 200px)" }}><Loader /></div> 
   : <Outlet />
 }
         {/* {loading ? <Loader /> : <Outlet />} */}
-       <Footer></Footer>
+      
        <ToastContainer position="top-center" autoClose={2000} />
        
         
@@ -35,4 +33,4 @@ const Root = () => {
     );
 };
 
-export default Root;
+export default Condition;

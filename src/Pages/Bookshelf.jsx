@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { auth } from "../firebase/firebase.init";
 import { Link } from "react-router";
 
 const Bookshelf = () => {
@@ -11,15 +10,9 @@ const Bookshelf = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const token = await user.getIdToken();
+           
         axios
-          .get("https://server-site-sigma-ashy.vercel.app/books", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
+          .get("https://server-site-sigma-ashy.vercel.app/books")
           .then((res) => {
             setBooks(res.data);
             setFilteredBooks(res.data);
@@ -27,7 +20,7 @@ const Bookshelf = () => {
           .catch((err) => {
             console.error("Error fetching books:", err);
           });
-      }
+      
     };
     fetchBooks();
   }, []);
@@ -48,7 +41,7 @@ const Bookshelf = () => {
   }, [searchQuery, statusFilter, books]);
 
   return (
-    <div className="p-6">
+    <div className=" max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold mb-4">Bookshelf</h2>
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -72,7 +65,7 @@ const Bookshelf = () => {
       </div>
 
     
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {filteredBooks.map((book) => (
           <div
             key={book._id}
@@ -81,14 +74,14 @@ const Bookshelf = () => {
             <img
               src={book.cover_photo}
               alt={book.book_title}
-              className="h-48 w-full object-cover rounded-md mb-2"
+              className="h-32 w-full object-cover rounded-md mb-2"
             />
-            <div className="flex justify-between items-center">
+           {/*  <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold">{book.book_title}</h3>
               <p className="text-green-600 font-semibold">
                 Upvotes: {book.upvote}
               </p>
-            </div>
+            </div> */}
             <p>
               <strong>Author:</strong> {book.book_author}
             </p>

@@ -15,8 +15,9 @@ const AddBook = () => {
       user_email: user.email,
       user_name: user.displayName,
       upvote: 0,
-      total_page: parseInt(data.total_page), 
-    };
+      total_page: parseInt(data.total_page),
+       createdAt: new Date() 
+    };    
 
     axiosSecure.post('/books', bookData)
       .then((res) => {

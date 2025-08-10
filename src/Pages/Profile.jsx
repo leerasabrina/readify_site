@@ -1,21 +1,16 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from "axios";
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase/firebase.init';
-
+import { AuthContext } from '../Contexts/AuthContext';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28BFE'];
 
 const Profile = () => {
-    const [user, setUser] = useState(null);
+  const {user}=useContext(AuthContext);
+   
   const [books, setBooks] = useState([]);
  
-  useEffect(() => {
-      const unsubscribe = onAuthStateChanged(auth, setUser);
-      return () => unsubscribe();
-    }, []);
-
+ 
     useEffect(() => {
         const fetchBooks = async () => {
           if (user?.email) {
@@ -48,7 +43,7 @@ const Profile = () => {
   const totalBooks = books.length;
 
   return (
-    <div className="p-4 max-w-5xl mx-auto">
+    <div className=" max-w-7xl mx-auto">
       <div className="flex items-center gap-4 mb-6">
         <img src={user?.photoURL} alt="profile" className="w-20 h-20 rounded-full object-cover" />
         <div>

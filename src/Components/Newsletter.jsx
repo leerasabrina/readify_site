@@ -19,7 +19,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto my-20 bg-slate-100 p-8 rounded-lg text-center  ">
+    <div className="max-w-7xl mx-auto my-20 bg-slate-50 p-8 rounded-lg text-center  ">
       <h2 className="text-3xl fade-in-up font-bold mb-4">Subscribe to our Newsletter</h2>
       <p className="mb-6 text-gray-600">
         Get updates about  tasks directly in your inbox.

@@ -14,7 +14,10 @@ a:hover {
 
 body {
   margin: 0;
+  background-color: white;
+  color: black;
 }
+
 
 .h1 {
   font-size:24px;
@@ -34,6 +37,53 @@ button:hover {
   border-color: #0410ee;
 }
 
+
+
+h2,h3, h4, h5, h6 {
+  color: black;
+}
+
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  h1, h2, h3, h4, h5, h6,p {
+    color: white;
+  }
+
+  a {
+    color: lightblue;
+  }
+  
+
+  label {
+    color: white;
+  }
+
+  input, textarea, select {
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #555;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #bbb;
+  }
+  button {
+  color: white !important;
+  border:1px solid white !important;
+}
+ button:hover {
+    border-color: #53adf2 !important;
+  }
+
+
+}
 
 @media (prefers-color-scheme: light) {
   
